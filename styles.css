@@ -93,13 +93,13 @@ html {
   position: absolute;
   top: 300px; /* adjust based on header height */
   bottom: 0;
-  width: 340px; /* or adjust smaller */
+  width: 340px; 
   display: flex;
   flex-direction: column;
   justify-content: space-around; /* space between images */
   align-items: center;
   padding: 10px 0;
-  z-index: -1;
+  z-index: 0;
 }
 
 #side-decor-left {
