@@ -1,18 +1,25 @@
 /* styles.css */
 #site-header {
   width: 100%;
-  text-align: center;
-  margin-bottom: 20px;
+  overflow: hidden;
 }
 
 #site-header img {
   width: 100%;
-  max-height: 300px;
+  height: auto;
+  max-height: 300px; /* keeps it tidy on desktop */
+  display: block;
   object-fit: cover;
   border-bottom: 2px solid #f39c12;
   box-shadow: 0 2px 8px #00000088;
 }
 
+/* Make it taller on small screens */
+@media (max-width: 600px) {
+  #site-header img {
+    max-height: 200px;
+  }
+}
 
 body {
   background: #1e1e2f;
