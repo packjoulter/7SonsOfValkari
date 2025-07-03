@@ -189,7 +189,7 @@ html {
     max-width: 250px;
   }
 }
-/* Fade-in effect for NPC result */
+
 #npc-result {
   transition: opacity 0.5s ease;
   opacity: 1;
