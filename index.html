@@ -55,6 +55,15 @@
 </section>
 
     <li><strong>NPC Generator:</strong> Create unique characters with traits and backgrounds.</li>
+
+    <section id="npc-generator" style="max-width: 600px; margin: 40px auto; text-align: left;">
+  <h2>Random NPC Generator</h2>
+  
+  <button id="generate-npc-btn">Generate NPC</button>
+
+  <div id="npc-result" style="margin-top: 20px; padding: 10px; background-color: #2c2c3a; border-radius: 8px; box-shadow: 2px 2px 6px #00000088; color: #f0e6d2;"></div>
+</section>
+
  
   </ul>
 </section>
@@ -130,6 +139,36 @@
     }
   });
 </script> 
+
+<script> // Random NPC Generator Script
+  const npcData = {
+    names: ["Aric", "Bryn", "Caelen", "Dara", "Eryn", "Faelar", "Gorin", "Hale", "Isolde", "Jarek"],
+    races: ["Human", "Elf", "Dwarf", "Halfling", "Tiefling", "Dragonborn", "Half-Orc", "Gnome"],
+    classes: ["Fighter", "Wizard", "Rogue", "Cleric", "Ranger", "Bard", "Paladin", "Warlock"],
+    traits: ["has a pet raven", "is always humming", "collects shiny rocks", "speaks in rhymes", "is missing a finger", "has a mysterious tattoo", "is afraid of magic", "wears mismatched boots"]
+  };
+
+  function getRandomFrom(array) {
+    return array[Math.floor(Math.random() * array.length)];
+  }
+
+  document.getElementById("generate-npc-btn").addEventListener("click", () => {
+    const name = getRandomFrom(npcData.names);
+    const race = getRandomFrom(npcData.races);
+    const npcClass = getRandomFrom(npcData.classes);
+    const trait = getRandomFrom(npcData.traits);
+
+    const npcResult = `
+      <strong>Name:</strong> ${name}<br/>
+      <strong>Race:</strong> ${race}<br/>
+      <strong>Class:</strong> ${npcClass}<br/>
+      <strong>Trait:</strong> ${trait}
+    `;
+
+    document.getElementById("npc-result").innerHTML = npcResult;
+  });
+</script>
+
 
 </body>
 </html>
