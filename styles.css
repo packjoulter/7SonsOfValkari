@@ -1,4 +1,18 @@
 /* styles.css */
+#site-header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#site-header img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-bottom: 2px solid #f39c12;
+  box-shadow: 0 2px 8px #00000088;
+}
+
 
 body {
   background: #ffffff;
