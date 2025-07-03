@@ -142,9 +142,10 @@
 
 <script> // Random NPC Generator Script
   const npcData = {
-    names: ["Aric", "Bryn", "Caelen", "Dara", "Eryn", "Faelar", "Gorin", "Hale", "Isolde", "Jarek"],
-    races: ["Human", "Elf", "Dwarf", "Halfling", "Tiefling", "Dragonborn", "Half-Orc", "Gnome"],
-    classes: ["Fighter", "Wizard", "Rogue", "Cleric", "Ranger", "Bard", "Paladin", "Warlock"],
+    firstNames: ["Aric", "Bryn", "Caelen", "Dara", "Eryn", "Faelar", "Gorin", "Hale", "Isolde", "Jarek"],
+    lastNames: ["Stormborn", "Nightshade", "Ironfist", "Swiftfoot", "Duskwalker", "Brightstar", "Shadowalker", "Oakenshield", "Flameheart", "Silverhand"],
+    races: ["🧙‍♂️ Human", "🌿 Elf", "⛏️ Dwarf", "👣 Halfling", "😈 Tiefling", "🐲 Dragonborn", "💪 Half-Orc", "🧠 Gnome"],
+    classes: ["⚔️ Fighter", "🪄 Wizard", "🗡️ Rogue", "⛪ Cleric", "🏹 Ranger", "🎻 Bard", "🛡️ Paladin", "🔥 Warlock"],
     traits: ["has a pet raven", "is always humming", "collects shiny rocks", "speaks in rhymes", "is missing a finger", "has a mysterious tattoo", "is afraid of magic", "wears mismatched boots"]
   };
 
@@ -153,21 +154,42 @@
   }
 
   document.getElementById("generate-npc-btn").addEventListener("click", () => {
-    const name = getRandomFrom(npcData.names);
+    const firstName = getRandomFrom(npcData.firstNames);
+    const lastName = getRandomFrom(npcData.lastNames);
     const race = getRandomFrom(npcData.races);
     const npcClass = getRandomFrom(npcData.classes);
     const trait = getRandomFrom(npcData.traits);
 
-    const npcResult = `
-      <strong>Name:</strong> ${name}<br/>
+    const npcResultText = `
+      <strong>Name:</strong> ${firstName} ${lastName}<br/>
       <strong>Race:</strong> ${race}<br/>
       <strong>Class:</strong> ${npcClass}<br/>
       <strong>Trait:</strong> ${trait}
     `;
 
-    document.getElementById("npc-result").innerHTML = npcResult;
+    const resultEl = document.getElementById("npc-result");
+    resultEl.innerHTML = npcResultText;
+
+    // Fade in animation
+    resultEl.style.opacity = 0;
+    setTimeout(() => {
+      resultEl.style.opacity = 1;
+    }, 50);
+  });
+
+  // Copy to clipboard
+  document.getElementById("copy-npc-btn").addEventListener("click", () => {
+    const text = document.getElementById("npc-result").innerText;
+    if (!text.trim()) {
+      alert("Generate an NPC first!");
+      return;
+    }
+    navigator.clipboard.writeText(text)
+      .then(() => alert("NPC copied to clipboard!"))
+      .catch(() => alert("Failed to copy."));
   });
 </script>
+
 
 
 </body>
