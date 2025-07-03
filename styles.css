@@ -276,9 +276,16 @@ html {
   opacity: 1;
 }
 
-#slur-generator {
-  text-align: center;
-  padding: 20px;
+#slur-generator select {
+  width: 100%;
+  padding: 8px 12px;
+  margin-bottom: 16px;
+  background-color: #1e1e2f;
+  color: #f0e6d2;
+  border: 1px solid #555;
+  border-radius: 6px;
+  font-size: 1em;
+  box-sizing: border-box;
 }
 
 #generate-slur {
