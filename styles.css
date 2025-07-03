@@ -301,3 +301,13 @@ html {
   color: #f39c12;
   margin-top: 15px;
 }
+
+#race-select {
+  font-size: 1em;
+  padding: 5px 10px;
+  margin: 10px;
+}
+
+#generate-slur {
+  margin-top: 10px;
+}
