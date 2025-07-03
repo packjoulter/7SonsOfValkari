@@ -277,7 +277,7 @@ html {
 }
 
 #slur-generator select {
-   width: 100%;
+   width: 40%;
   padding: 8px 12px;
   margin-bottom: 16px;
   background-color: #1e1e2f;
