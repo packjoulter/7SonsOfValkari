@@ -1,1 +1,1 @@
-This is the page for the 7 sons
+7 sons of valkari page
