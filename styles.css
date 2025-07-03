@@ -120,3 +120,7 @@ html {
   font-size: 1.2em;
   text-align: center;
 }
+
+body {
+  border: 5px solid red;
+}
