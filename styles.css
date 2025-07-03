@@ -90,7 +90,7 @@ html {
 
 #side-decor-left,
 #side-decor-right {
-  position: fixed;
+  position: absolute;
   top: 0;
   bottom: 0;
   width: 340px; /* or adjust smaller */
