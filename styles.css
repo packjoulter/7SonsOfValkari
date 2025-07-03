@@ -114,7 +114,7 @@ html {
 #side-decor-right img {
   width: 280px; /* control the size */
   height: auto;
-  opacity: 0;
+  opacity: 1;
   object-fit: contain;
 }
 
