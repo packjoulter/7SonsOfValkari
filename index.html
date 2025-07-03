@@ -78,7 +78,10 @@
   <div id="npc-result" style="margin-top: 20px; padding: 10px; background-color: #2c2c3a; border-radius: 8px; box-shadow: 2px 2px 6px #00000088; color: #f0e6d2;"></div>
 </section>
 
- 
+<button onclick="generateSlur()">Generate Slur</button>
+<p id="slurResult"></p>
+
+
   </ul>
 </section>
 
@@ -246,6 +249,30 @@
       .catch(() => alert("Failed to copy."));
   });
 </script>
+<script>
+let slurData = []; // Initialize slurData 
+// Load the slurs.json file
+fetch('slurs.json')
+  .then(response => response.json())
+  .then(data => {
+    slurData = data;
+  })
+  .catch(err => {
+    console.error('Error loading slurs.json:', err);
+  });
 
+// Generate slur when button clicked
+document.getElementById('generate-slur').addEventListener('click', () => {
+  if (slurData.length === 0) {
+    document.getElementById('slur-result').textContent = 'Slur data not loaded.';
+    return;
+  }
+
+  const group = slurData[Math.floor(Math.random() * slurData.length)];
+  const slur = group.list[Math.floor(Math.random() * group.list.length)];
+  document.getElementById('slur-result').textContent = `${group.title}: ${slur}`;
+});
+
+</script>
 </body>
 </html>
