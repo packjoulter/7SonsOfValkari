@@ -276,3 +276,28 @@ html {
   opacity: 1;
 }
 
+#slur-generator {
+  text-align: center;
+  padding: 20px;
+}
+
+#generate-slur {
+  background-color: #4a4a4a;
+  color: #fff;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#generate-slur:hover {
+  background-color: #f39c12;
+}
+
+#slur-result {
+  font-size: 1.4em;
+  color: #f39c12;
+  margin-top: 15px;
+}
