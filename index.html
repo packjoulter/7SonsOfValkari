@@ -159,6 +159,17 @@
     "⚔️ Fighter", "🪄 Wizard", "🗡️ Rogue", "⛪ Cleric", "🏹 Ranger",
     "🎻 Bard", "🛡️ Paladin", "🔥 Warlock", "🍳 Chef", "🎪 Jester"
   ],
+  alignments: [
+    "Lawful Good", "Neutral Good", "Chaotic Good",
+    "Lawful Neutral", "True Neutral", "Chaotic Neutral",
+    "Lawful Evil", "Neutral Evil", "Chaotic Evil"
+  ],
+  professions: [
+    "blacksmith", "innkeeper", "merchant", "herbalist", "thief", 
+    "monster hunter", "alchemist", "fisherman", "farmer",
+    "rat catcher", "bard-for-hire", "fortune teller", "goblin negotiator",
+    "beekeeper", "gravedigger", "local fool"
+  ],
   traits: [
     "has a pet raven", "is always humming", "collects shiny rocks",
     "speaks in rhymes", "is missing a finger", "has a mysterious tattoo",
@@ -172,6 +183,7 @@
     "wears a fake mustache (poorly)"
   ]
 };
+
 
 
   function getRandomFrom(array) {
@@ -214,8 +226,6 @@
       .catch(() => alert("Failed to copy."));
   });
 </script>
-
-
 
 </body>
 </html>
