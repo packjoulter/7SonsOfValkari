@@ -85,7 +85,6 @@
   </ul>
 </section>
 
-
   <footer>
     &copy; 2025 Jack Poulter
   </footer>
@@ -249,8 +248,10 @@
       .catch(() => alert("Failed to copy."));
   });
 </script>
-<script>
-let slurData = []; // Initialize slurData 
+
+<script> // Slur Generator Script
+// Initialize slur data
+let slurData = []; 
 // Load the slurs.json file
 fetch('slurs.json')
   .then(response => response.json())
@@ -274,5 +275,6 @@ document.getElementById('generate-slur').addEventListener('click', () => {
 });
 
 </script>
+
 </body>
 </html>
