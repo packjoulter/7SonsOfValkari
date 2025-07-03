@@ -91,7 +91,7 @@ html {
 #side-decor-left,
 #side-decor-right {
   position: absolute;
-  top: 0;
+  top: 300px; /* adjust based on header height */
   bottom: 0;
   width: 340px; /* or adjust smaller */
   display: flex;
