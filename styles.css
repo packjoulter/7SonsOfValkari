@@ -93,29 +93,23 @@ html {
   position: fixed;
   top: 0;
   bottom: 0;
-  width: 80px; /* adjust size */
+  width: 80px; /* or adjust smaller */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around; /* space between images */
+  align-items: center;
   padding: 10px 0;
-  z-index: -1; /* behind content */
-}
-
-#side-decor-left {
-  left: 0;
-}
-
-#side-decor-right {
-  right: 0;
+  z-index: -1;
 }
 
 #side-decor-left img,
 #side-decor-right img {
-  width: 100%;
+  width: 60px; /* control the size */
   height: auto;
-  opacity: 0.5;
+  opacity: 0.6;
   object-fit: contain;
 }
+
 
 /* Space for main content */
 #main-content {
