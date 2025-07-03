@@ -277,14 +277,14 @@ html {
 }
 
 #slur-generator select {
-  width: 70%;
-  padding: 6px 10px;  
-  margin-bottom: 12px;  
+   width: 100%;
+  padding: 8px 12px;
+  margin-bottom: 16px;
   background-color: #1e1e2f;
   color: #f0e6d2;
   border: 1px solid #555;
   border-radius: 6px;
-  font-size: 0.9em;  
+  font-size: 1em;
   box-sizing: border-box;
 }
 
