@@ -59,7 +59,6 @@
 <button id="generate-npc-btn">Generate NPC</button>
   <button id="copy-npc-btn">Copy NPC</button>
 </div>
-
   <div id="npc-result" style="margin-top: 20px; padding: 10px; background-color: #2c2c3a; border-radius: 8px; box-shadow: 2px 2px 6px #00000088; color: #f0e6d2;"></div>
 </section>
 
@@ -141,12 +140,39 @@
 
 <script> // Random NPC Generator Script
   const npcData = {
-    firstNames: ["Aric", "Bryn", "Caelen", "Dara", "Eryn", "Faelar", "Gorin", "Hale", "Isolde", "Jarek"],
-    lastNames: ["Stormborn", "Nightshade", "Ironfist", "Swiftfoot", "Duskwalker", "Brightstar", "Shadowalker", "Oakenshield", "Flameheart", "Silverhand"],
-    races: ["🧙‍♂️ Human", "🌿 Elf", "⛏️ Dwarf", "👣 Halfling", "😈 Tiefling", "🐲 Dragonborn", "💪 Half-Orc", "🧠 Gnome"],
-    classes: ["⚔️ Fighter", "🪄 Wizard", "🗡️ Rogue", "⛪ Cleric", "🏹 Ranger", "🎻 Bard", "🛡️ Paladin", "🔥 Warlock"],
-    traits: ["has a pet raven", "is always humming", "collects shiny rocks", "speaks in rhymes", "is missing a finger", "has a mysterious tattoo", "is afraid of magic", "wears mismatched boots"]
-  };
+  firstNames: [
+    "Aric", "Bryn", "Caelen", "Dara", "Eryn", "Faelar", "Gorin", "Hale", "Isolde", "Jarek",
+    "Lira", "Milo", "Nyssa", "Orin", "Pip", "Quinn", "Rian", "Syl", "Tess", "Vorn",
+    "Wren", "Xan", "Yara", "Zed"
+  ],
+  lastNames: [
+    "Stormborn", "Nightshade", "Ironfist", "Swiftfoot", "Duskwalker", "Brightstar",
+    "Shadowalker", "Oakenshield", "Flameheart", "Silverhand",
+    "Underbough", "Fizzlespark", "Strongjaw", "Hogsbottom", "Pebblepocket",
+    "Mugmuncher", "Snoreblaster", "Picklefarmer", "Fumblefoot", "Butterbuns"
+  ],
+  races: [
+    "🧙‍♂️ Human", "🌿 Elf", "⛏️ Dwarf", "👣 Halfling", "😈 Tiefling",
+    "🐲 Dragonborn", "💪 Half-Orc", "🧠 Gnome"
+  ],
+  classes: [
+    "⚔️ Fighter", "🪄 Wizard", "🗡️ Rogue", "⛪ Cleric", "🏹 Ranger",
+    "🎻 Bard", "🛡️ Paladin", "🔥 Warlock", "🍳 Chef", "🎪 Jester"
+  ],
+  traits: [
+    "has a pet raven", "is always humming", "collects shiny rocks",
+    "speaks in rhymes", "is missing a finger", "has a mysterious tattoo",
+    "is afraid of magic", "wears mismatched boots",
+    "insists they are a prince/princess", "laughs at their own jokes",
+    "thinks they're invisible when they close their eyes",
+    "is obsessed with cheese", "believes their hat is magical",
+    "challenges everyone to arm wrestle", "only speaks in third person",
+    "is convinced they’re cursed", "writes bad poetry about battle",
+    "owns 12 cats (and talks about them constantly)", "has a chicken sidekick",
+    "wears a fake mustache (poorly)"
+  ]
+};
+
 
   function getRandomFrom(array) {
     return array[Math.floor(Math.random() * array.length)];
