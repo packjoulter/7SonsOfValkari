@@ -179,7 +179,17 @@ html {
   background-color: #d67e0a;
 }
 
-
+@media (max-width: 500px) {
+  #npc-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  #npc-buttons button {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+/* Fade-in effect for NPC result */
 #npc-result {
   transition: opacity 0.5s ease;
   opacity: 1;
