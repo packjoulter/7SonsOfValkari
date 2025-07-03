@@ -93,7 +93,7 @@ html {
   position: fixed;
   top: 0;
   bottom: 0;
-  width: 220px; /* or adjust smaller */
+  width: 340px; /* or adjust smaller */
   display: flex;
   flex-direction: column;
   justify-content: space-around; /* space between images */
@@ -104,7 +104,7 @@ html {
 
 #side-decor-left img,
 #side-decor-right img {
-  width: 200px; /* control the size */
+  width: 280px; /* control the size */
   height: auto;
   opacity: 0.6;
   object-fit: contain;
