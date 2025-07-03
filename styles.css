@@ -121,7 +121,13 @@ html {
 @media (max-width: 768px) {
   #side-decor-left,
   #side-decor-right {
-    display: none;
+    position: static; /* reset position on small screens */
+    width: 100%;
+    top: auto;
+    bottom: auto;
+    flex-direction: row; /* align images side by side */
+    justify-content: center; /* center images */
+    padding: 20px 0;
   }
 }
 
