@@ -110,6 +110,14 @@ html {
   object-fit: contain;
 }
 
+@media (max-width: 768px) {
+  #side-decor-left,
+  #side-decor-right {
+    display: none;
+  }
+}
+
+
 
 /* Space for main content */
 #main-content {
