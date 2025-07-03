@@ -102,6 +102,14 @@ html {
   z-index: -1;
 }
 
+#side-decor-left {
+  left: 0;
+}
+
+#side-decor-right {
+  right: 0;
+}
+
 #side-decor-left img,
 #side-decor-right img {
   width: 280px; /* control the size */
