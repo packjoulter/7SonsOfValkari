@@ -319,26 +319,18 @@ html {
 #generate-slur {
   margin-top: 10px;
 }
-
 #main-nav {
   position: absolute;
-  top: 10px;
+  top: 10px;  /* Adjust as needed to sit above header image */
   left: 10px;
-  z-index: 1000;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
+  z-index: 2000;
 }
 
 .dropbtn {
-  background-color: #1e1e2f;
+  background-color: transparent;
   color: #f0e6d2;
-  padding: 8px 12px;
-  font-size: 1em;
-  border: 1px solid #555;
-  border-radius: 6px;
+  font-size: 1.5em;  /* Bigger icon */
+  border: none;
   cursor: pointer;
 }
 
@@ -350,7 +342,7 @@ html {
   box-shadow: 0 8px 16px rgba(0,0,0,0.3);
   border: 1px solid #555;
   border-radius: 6px;
-  z-index: 1000;
+  z-index: 2000;
 }
 
 .dropdown-content a {
@@ -369,5 +361,5 @@ html {
 }
 
 .dropdown:hover .dropbtn {
-  background-color: #333;
+  color: #ccc;
 }
