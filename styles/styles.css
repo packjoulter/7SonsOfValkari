@@ -64,7 +64,6 @@ p {
   text-align: center;
 }
 
-
 .dropbtn {
   background-color: transparent;
   color: #f0e6d2;
@@ -345,9 +344,6 @@ p {
 .collapsible-section {
   margin-bottom: 30px;
 }
-
-/* (rest of your existing CSS stays the same) */
-
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
