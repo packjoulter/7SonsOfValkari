@@ -193,35 +193,38 @@ p {
 /* Side images */
 #side-decor-left,
 #side-decor-right {
-  position: absolute;
-  top: 300px;
+  position: fixed;
+  top: 0;
   bottom: 0;
-  width: 300px;
+  width: 100px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  padding: 10px 0;
-  z-index: 0;
+  justify-content: center;
+  gap: 10px;
+  z-index: -1; /* behind main content */
 }
 
-#side-decor-left { left: 0; }
-#side-decor-right { right: 0; }
+#side-decor-left {
+  left: 0;
+}
+
+#side-decor-right {
+  right: 0;
+}
 
 #side-decor-left img,
 #side-decor-right img {
-  width: 80%;
-  max-width: 240px;
+  width: 80px;
   height: auto;
-  object-fit: contain;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   #side-decor-left,
   #side-decor-right {
-    display: none;
+    display: none; /* or switch to horizontal bar, your choice */
   }
 }
+
 
 /* General responsiveness */
 @media (max-width: 600px) {
