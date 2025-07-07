@@ -4,7 +4,8 @@ body {
   color: #f0e6d2;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  padding: 20px;
+  padding: 0px;
+  border: 0;
   text-align: center;
 }
 
@@ -226,7 +227,7 @@ p {
   #slur-generator-background select {
     width: 100%;
   }
-  
+
 }
 .back-home-button {
   display: inline-block;
