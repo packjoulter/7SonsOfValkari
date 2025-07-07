@@ -211,6 +211,7 @@ p {
   justify-content: flex-start; /* no need to center anymore if we're offsetting top */
   gap: 10px;
   z-index: -1;
+  padding: 0% 20px;
 }
 
 #side-decor-left {
