@@ -203,9 +203,9 @@ p {
 #side-decor-left,
 #side-decor-right {
   position: fixed;
-  top: 150px;  /* push down below header (adjust this value as needed) */
+  top: 300px;  /* push down below header (adjust this value as needed) */
   bottom: 0;
-  width: 120px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start; /* no need to center anymore if we're offsetting top */
@@ -223,7 +223,7 @@ p {
 
 #side-decor-left img,
 #side-decor-right img {
-  width: 100px;
+  width: 300px;
   height: auto;
 }
 
