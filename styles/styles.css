@@ -205,7 +205,7 @@ p {
   position: fixed;
   top: 0;
   bottom: 0;
-  width: 120px; /* or whatever fixed width you prefer */
+  width: 300px; /* or whatever fixed width you prefer */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -223,7 +223,7 @@ p {
 
 #side-decor-left img,
 #side-decor-right img {
-  width: 100px; /* fixed width for all images */
+  width: 300px; /* fixed width for all images */
   height: auto;
 }
 
