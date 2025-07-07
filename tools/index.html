@@ -15,7 +15,72 @@
 
   <section id="loot-generator">
     <h2>Loot Table Generator</h2>
-    <!-- Loot Generator UI + JS -->
+      <script> // Random Loot Generator Script
+  async function loadLootTable(tableName) {
+    if (!tableName) return null;
+    try {
+      const response = await fetch(`${tableName}_loot.json`);
+      if (!response.ok) throw new Error("Failed to load loot table.");
+      const data = await response.json();
+      return data;
+    } catch (error) {
+      alert(error.message);
+      return null;
+    }
+  }
+
+  function filterByRarity(data, rarity) {
+    return data.filter(entry => entry.rarity.toLowerCase() === rarity.toLowerCase());
+  }
+
+  function lookupLoot(data, roll) {
+    for (const entry of data) {
+      const [start, end] = entry.range;
+      if (roll >= start && roll <= end) {
+        return entry;
+      }
+    }
+    return null;
+  }
+
+  document.getElementById("get-loot-btn").addEventListener("click", async () => {
+    const tableName = document.getElementById("table-select").value;
+    const rarity = document.getElementById("rarity-select").value;
+    const roll = parseInt(document.getElementById("roll-input").value, 10);
+
+    const resultEl = document.getElementById("loot-result");
+    resultEl.textContent = "";
+
+    if (!tableName) {
+      alert("Please select a loot table.");
+      return;
+    }
+    if (!rarity) {
+      alert("Please select a rarity.");
+      return;
+    }
+    if (isNaN(roll) || roll < 1 || roll > 100) {
+      alert("Please enter a roll between 1 and 100.");
+      return;
+    }
+
+    const tableData = await loadLootTable(tableName);
+    if (!tableData) return;
+
+    const filtered = filterByRarity(tableData, rarity);
+    if (filtered.length === 0) {
+      resultEl.textContent = `No items found for rarity '${rarity}'.`;
+      return;
+    }
+
+    const loot = lookupLoot(filtered, roll);
+    if (loot) {
+      resultEl.textContent = `You found: ${loot.item} (Rarity: ${loot.rarity})`;
+    } else {
+      resultEl.textContent = "No item found for this roll and rarity.";
+    }
+  });
+</script> 
   </section>
 
   <section id="slur-generator">
