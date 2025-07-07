@@ -56,6 +56,15 @@ p {
   z-index: 2000;
 }
 
+#main-content {
+  max-width: 1000px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+
 .dropbtn {
   background-color: transparent;
   color: #f0e6d2;
