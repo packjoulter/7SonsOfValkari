@@ -187,7 +187,7 @@ p {
 
 /* Valkari Logo */
 #valkari-logo {
-  width: min(40vw, 900px); /* Scales with screen size, max 300px */
+  width: min(10vw, 900px); /* Scales with screen size, max 300px */
   padding: 10px 0;
 }
 
