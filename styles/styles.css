@@ -91,7 +91,7 @@ p {
 }
 
 /* Tools + Generators container */
-#tools, #loot-generator, #npc-generator, #slur-generator-backgroubd {
+#tools, #loot-generator, #npc-generator, #slur-generator-background {
   background-color: #2c2c3a;
   padding: 20px;
   border-radius: 12px;
