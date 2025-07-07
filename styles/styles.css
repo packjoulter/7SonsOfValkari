@@ -198,19 +198,18 @@ p {
   display: block;
 }
 
-
-/* Side images */
+/* side-decor */
 #side-decor-left,
 #side-decor-right {
   position: fixed;
   top: 0;
   bottom: 0;
-  width: 100px;
+  width: 300px; /* this can be anything — the images control the real size */
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 10px;
-  z-index: -1; /* behind main content */
+  z-index: -1;
 }
 
 #side-decor-left {
@@ -223,16 +222,17 @@ p {
 
 #side-decor-left img,
 #side-decor-right img {
-  width: 80px;
+  width: min(10vw, 150px);
   height: auto;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   #side-decor-left,
   #side-decor-right {
-    display: none; /* or switch to horizontal bar, your choice */
+    display: none;
   }
 }
+
 
 
 /* General responsiveness */
