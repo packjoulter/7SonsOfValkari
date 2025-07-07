@@ -159,7 +159,7 @@
   async function loadLootTable(tableName) {
     if (!tableName) return null;
     try {
-      const response = await fetch(`${tableName}_loot.json`);
+      const response = await fetch(`/data/${tableName}_loot.json`);
       if (!response.ok) throw new Error("Failed to load loot table.");
       const data = await response.json();
       return data;
