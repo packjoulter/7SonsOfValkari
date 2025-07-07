@@ -240,7 +240,7 @@
 let slurData = [];
 
 // Load slurs.json
-fetch('slurs.json')
+fetch('/data/slurs.json')
   .then(response => response.json())
   .then(data => {
     slurData = data;
