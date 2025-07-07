@@ -276,6 +276,14 @@ html {
   opacity: 1;
 }
 
+#slur-generator-backgroubd {
+  background-color: #2c2c3a;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 2px 2px 8px #00000088;
+  margin-top: 40px;
+}
+
 #slur-generator select {
    width: 40%;
   padding: 8px 12px;
