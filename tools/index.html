@@ -176,7 +176,50 @@
 
   <section id="slur-generator">
     <h2>Slur Generator</h2>
-    <!-- Slur Generator UI + JS -->
+    <script> // Slur Generator Script
+let slurData = [];
+
+// Load slurs.json
+fetch('slurs.json')
+  .then(response => response.json())
+  .then(data => {
+    slurData = data;
+    populateDropdown(data);
+  })
+  .catch(err => {
+    console.error('Error loading slurs.json:', err);
+  });
+
+// Populate dropdown with group titles
+function populateDropdown(data) {
+  const select = document.getElementById('race-select');
+  data.forEach(group => {
+    const option = document.createElement('option');
+    option.value = group.title;
+    option.textContent = group.title;
+    select.appendChild(option);
+  });
+}
+
+// Generate slur for selected group
+document.getElementById('generate-slur').addEventListener('click', () => {
+  const selectedTitle = document.getElementById('race-select').value;
+  if (!selectedTitle) {
+    document.getElementById('slur-result').textContent = 'Please select a race/group.';
+    return;
+  }
+
+  const group = slurData.find(g => g.title === selectedTitle);
+  if (!group || group.list.length === 0) {
+    document.getElementById('slur-result').textContent = 'No slurs found for this group.';
+    return;
+  }
+
+  const slur = group.list[Math.floor(Math.random() * group.list.length)];
+  document.getElementById('slur-result').textContent = `${group.title}: ${slur}`;
+});
+
+    </script>
   </section>
 
   <a href="/">Back to Home</a>
