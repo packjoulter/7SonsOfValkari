@@ -99,5 +99,20 @@
   &copy; 2025 Jack Poulter
 </footer>
 
+<script> 
+  document.querySelectorAll(".collapsible").forEach(button => {
+    button.addEventListener("click", () => {
+      button.classList.toggle("active");
+      const content = button.nextElementSibling;
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null; // collapse
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px"; // expand
+      }
+    });
+  });
+</script>
+
+
 </body><!-- END OF BODY -->
 </html>

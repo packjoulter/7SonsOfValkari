@@ -338,3 +338,39 @@ p {
     font-size: 1rem;
   }
 }
+
+.collapsible {
+  background-color: #f39c12;
+  color: white;
+  cursor: pointer;
+  padding: 12px 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  font-size: 1.8rem;
+  font-weight: bold;
+  outline: none;
+  border-radius: 5px;
+  margin-top: 1em;
+  box-shadow: 1px 1px 4px #000;
+  transition: background-color 0.3s ease;
+}
+
+.collapsible:hover,
+.collapsible.active {
+  background-color: #d87c00;
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background-color: #1a1a1a;
+  border-radius: 0 0 8px 8px;
+  color: #ddd;
+}
+
+.content p {
+  margin: 12px 0;
+}
