@@ -29,6 +29,7 @@ p {
 /* Header */
 #site-header {
   width: 100%;
+  position: relative;
   overflow: hidden;
 }
 
@@ -42,9 +43,42 @@ p {
   box-shadow: 0 2px 8px #00000088;
 }
 
+.header-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #f0f0f0;
+  text-shadow: 2px 2px 4px #000;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+}
+
+.header-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.4em;
+  color: #f39c12;
+}
+
+.header-text p {
+  font-size: 1.1rem;
+  margin-bottom: 0.3em;
+}
+
 @media (max-width: 600px) {
   #site-header img {
     max-height: 200px;
+  }
+  .header-text {
+    padding: 8px 12px;
+  }
+  .header-text h1 {
+    font-size: 1.8rem;
+  }
+  .header-text p {
+    font-size: 1rem;
   }
 }
 
@@ -202,12 +236,12 @@ p {
 #side-decor-left,
 #side-decor-right {
   position: absolute;
-  top: 310px;  /* push down below header (adjust this value as needed) */
+  top: 310px;  
   bottom: 0;
   width: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* no need to center anymore if we're offsetting top */
+  justify-content: flex-start;
   gap: 10px;
   z-index: -1;
 }
