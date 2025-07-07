@@ -203,12 +203,12 @@ p {
 #side-decor-left,
 #side-decor-right {
   position: fixed;
-  top: 0;
+  top: 150px;  /* push down below header (adjust this value as needed) */
   bottom: 0;
-  width: 300px; /* or whatever fixed width you prefer */
+  width: 120px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* no need to center anymore if we're offsetting top */
   gap: 10px;
   z-index: -1;
 }
@@ -223,18 +223,16 @@ p {
 
 #side-decor-left img,
 #side-decor-right img {
-  width: 300px; /* fixed width for all images */
+  width: 100px;
   height: auto;
 }
 
 @media (max-width: 600px) {
   #side-decor-left,
   #side-decor-right {
-    display: none; /* hide decor on small screens */
+    display: none;
   }
 }
-
-
 
 
 /* General responsiveness */
