@@ -301,7 +301,8 @@ p {
   font-size: 1em;
   box-shadow: 2px 2px 6px #00000088;
   transition: background-color 0.3s ease, color 0.3s ease;
-  gap : 10px;
+  top: 310px;
+  bottom: 10px;
 }
 
 .back-home-button:hover {
