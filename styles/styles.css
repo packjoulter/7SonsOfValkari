@@ -5,7 +5,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  padding-top: 70px;
+  padding-top: 60px;
   border: 0;
   display: flex;
   flex-direction: column;
@@ -241,7 +241,7 @@ p {
 /* Valkari Logo */
 #valkari-logo {
   width: min(120vw, 1000px); /* Scales with screen size, max 300px */
-  padding: 0;
+  padding: 10px 0;
 }
 
 #valkari-logo img {
