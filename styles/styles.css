@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
+
 /* Base styles */
 body {
   background: #1e1e2f;
-  color: #f0e6d2;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #e8e0c9;
+  font-family: 'Uncial Antiqua' 'Segoe UI', Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
   padding-top: 60px;
@@ -36,37 +38,37 @@ p {
 
 #site-header img {
   width: 100%;
-  height: auto;
   max-height: 300px;
-  display: block;
   object-fit: cover;
-  border-bottom: 2px solid #f39c12;
-  box-shadow: 0 2px 8px #00000088;
+  border-bottom: 4px solid #aa8c55;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
+/* Fantasy-themed header box */
 .header-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #f0f0f0;
-  text-shadow: 2px 2px 4px #000;
-  padding: 10px 20px;
-  background: rgba(0, 0, 0, 0.4);
-  border-radius: 8px;
+  background: url('/assets/parchment-texture.webp') repeat;
+  padding: 1.5rem;
+  border: 2px solid #aa8c55;
+  border-radius: 12px;
+  max-width: 700px;
+  margin: 1rem auto;
+  box-shadow: 0 0 10px #7b593e;
+  color: #f0e6d2;
+  font-family: 'Uncial Antiqua', serif;
 }
 
 .header-text h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.4em;
-  color: #f39c12;
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  color: #f4d58d;
+  text-shadow: 2px 2px 4px #000;
 }
 
 .header-text p {
-  font-size: 1.1rem;
-  margin-bottom: 0.3em;
+  font-size: 1.15rem;
+  color: #f0e6d2;
 }
+
 
 @media (max-width: 600px) {
   #site-header img {
@@ -85,14 +87,9 @@ p {
 
 /* Nav Styles */
 #main-nav {
-  background-color: #1e1e2f;
-  color: white;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  font-family: sans-serif;
+  background: linear-gradient(to right, #3c2f2f, #2a1f1f);
+  border-bottom: 3px solid #aa8c55;
+  font-family: 'Uncial Antiqua', serif;
 }
 
 #main-content {
@@ -122,33 +119,44 @@ p {
   display: inline-block;
 }
 
-.dropbtn {
-  background-color: #1e1e1e;
-  color: white;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  right: 0;
-  background-color: #333;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
-  z-index: 1001;
-}
-
-.dropdown-content a {
-  color: white;
-  padding: 12px 16px;
-  display: block;
+/* Brand name or logo in nav */
+.nav-left .logo {
+  color: #f4d58d;
+  font-size: 1.3rem;
+  text-shadow: 0 0 4px #eec97d;
   text-decoration: none;
 }
 
+/* Fancy menu icon */
+.dropbtn {
+  color: #f4d58d;
+  background-color: transparent;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  text-shadow: 0 0 6px #eec97d;
+}
+
+/* Dropdown style upgrade */
+.dropdown-content {
+  background-color: #382b1f;
+  border: 1px solid #aa8c55;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  color: #f0e6d2;
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
 .dropdown-content a:hover {
-  background-color: #555;
+  background-color: #5e422d;
+  color: #f4d58d;
+  font-weight: bold;
 }
 
 .dropdown:hover .dropdown-content {
