@@ -255,7 +255,7 @@ p {
 #side-decor-left,
 #side-decor-right {
   position: absolute;
-  top: 310px;  
+  top: 360px;  
   bottom: 0;
   width: 300px;
   display: flex;
