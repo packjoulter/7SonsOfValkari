@@ -241,7 +241,7 @@ p {
 /* Valkari Logo */
 #valkari-logo {
   width: min(120vw, 1000px); /* Scales with screen size, max 300px */
-  padding: 10px 0;
+  padding: 0;
 }
 
 #valkari-logo img {
