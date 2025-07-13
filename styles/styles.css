@@ -443,7 +443,7 @@ p {
   margin-top: 10px;
 }
 
-#fortune-cookie button {
+#generate-fortune{
   background-color: #f39c12;
   color: #1e1e2f;
   border: none;
