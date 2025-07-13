@@ -308,7 +308,34 @@ document.getElementById('generate-slur').addEventListener('click', () => {
 
     </script>
   </section>
+<section> <!-- Fortune Cookie Section -->
+  <h2>Fortune Cookie Generator</h2>
+  <p>Click the button to receive a random fortune cookie message.</p>
+  <button id="generate-fortune">Generate Fortune</button>
+  <div id="fortune-result" style="margin-top: 20px; font-weight: bold; color: #f39c12;"></div>
 
+  <script> // Fortune Cookie Generator Script
+  const fortunes = [
+    "You will find great fortune in unexpected places.",
+    "A new adventure awaits you just around the corner.",
+    "Your kindness will lead to unexpected rewards.",
+    "A thrilling time is in your near future.",
+    "You will soon discover a hidden talent.",
+    "An old friend will re-enter your life soon.",
+    "Your dreams are closer than you think.",
+    "A surprise gift will bring you joy.",
+    "You will overcome a great challenge with ease.",
+    "A journey of a thousand miles begins with a single step."
+  ];
+
+  document.getElementById("generate-fortune").addEventListener("click", () => {
+    const randomIndex = Math.floor(Math.random() * fortunes.length);
+    const fortune = fortunes[randomIndex];
+    document.getElementById("fortune-result").textContent = fortune;
+  });
+  </script>
+
+</section>
 <a href="/" class="back-home-button">Back to Home</a>
 
 </body>
