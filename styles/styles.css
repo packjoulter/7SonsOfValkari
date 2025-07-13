@@ -459,3 +459,14 @@ p {
 #fortune-cookie button:hover {
   background-color: #d67e0a;
 }
+
+#fortune-result {
+  font-size: 1.2em;
+  padding: 10px;
+  background-color: #1e1e2f;
+  border: 1px solid #555;
+  border-radius: 8px;
+  box-shadow: inset 0 0 4px #00000055;
+  color: #f39c12;
+  margin-top: 15px;
+}
