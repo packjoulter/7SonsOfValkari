@@ -1,186 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> <!-- START OF HEAD -->
-  <meta charset="UTF-8" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7 Sons Of Valkari - D&D Campaign Hub</title>
+  <meta name="description" content="Home of the 7 Sons of Valkari D&D campaign with tools, characters, and world lore.">
   <link rel="stylesheet" href="styles/styles.css">
-  <title>7 Sons Of Valkari</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head><!-- END OF HEAD -->
+  <link rel="preload" href="assets/Yggdrasil.webp" as="image">
+</head>
 
-<body><!-- START OF BODY -->
+<body>
+  <!-- Skip to main content link for accessibility -->
+  <a href="#main-content" class="visually-hidden">Skip to main content</a>
 
-<!-- Navigation Bar -->
-<nav id="main-nav">
-  <div class="nav-container">
-    <div class="nav-left">
-      <a href="/" class="logo">7 Sons of Valkari</a>
-    </div>
-    <div class="nav-right">
-      <div class="dropdown">
-        <button class="dropbtn">☰</button>
-        <div class="dropdown-content">
-          <a href="/tools/index.html">Tools</a>
-          <a href="/characters/index.html">Characters</a>
-          <a href="/about.html">About</a>
+  <!-- Navigation Bar -->
+  <nav id="main-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="/" class="logo" aria-label="7 Sons of Valkari home page">7 Sons of Valkari</a>
+      </div>
+      <div class="nav-right">
+        <div class="dropdown">
+          <button class="dropbtn" aria-expanded="false" aria-haspopup="true" aria-label="Main menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+          <div class="dropdown-content" role="menu">
+            <a href="/tools/index.html" role="menuitem">Tools</a>
+            <a href="/characters/index.html" role="menuitem">Characters</a>
+            <a href="/about.html" role="menuitem">About</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<!-- Main Header -->
-<header id="site-header">
-  <img src="assets/Yggdrasil.webp" alt="Yggdrasil">
-  <div style="text-align: center;">
-    <div class="header-text">
-      <h1>Welcome to the 7 Sons of Valkari</h1>
-      <p>The home for our Dungeons & Dragons campaign and ideas for programming projects.</p>
-      <p>Explore our tools and characters in the top right and our story below.</p>
-    </div>
-  </div>
-</header>
-
-<div id="side-decor-left"> <!-- Left  Images Section -->
-  <img src="assets/otis.JPG" alt="Left Decor 1">
-  <img src="assets/irarok.JPG" alt="Left Decor 2">
-  <img src="assets/taka.JPG" alt="Left Decor 3">
-  <img src="assets/tonk.JPG" alt="Left Decor 4">
-</div> 
-
-<div id="side-decor-right"> <!-- Right Images Section -->
-  <img src="assets/illizar.JPG" alt="Right Decor 1">
-  <img src="assets/minato.JPG" alt="Right Decor 2">
-  <img src="assets/koroth.JPG" alt="Right Decor 3">
-</div>
-
-
-<div id="valkari-logo"> <!-- Valkari Logo Section -->
-  <img src="assets/Valkari.png" alt="Valkari Logo" class="logo"> 
-</div>
-
-<div class="content-section"> <!-- Main Content Section -->
-  <h2>Locations in Valkari</h2>
-  
-  <div class="content-selection"> <!-- Whiterun Section -->
-    <div class="collapsible-section">
-    <button class="collapsible">Whiterun</button> 
-      <div class="content">
-      <h2>Whiterun</h2>
-      <h3>Significant Characters in Whiterun</h3>
+  <!-- Main Header -->
+  <header id="site-header">
+    <img src="assets/Yggdrasil.webp" alt="Yggdrasil, the World Tree from Norse mythology">
+    <div class="header-overlay">
+      <div class="header-text">
+        <h1>Welcome to the 7 Sons of Valkari</h1>
+        <p>The home for our Dungeons & Dragons campaign and ideas for programming projects.</p>
+        <p>Explore our tools and characters in the menu above and our story below.</p>
       </div>
     </div>
-  </div>
+  </header>
 
-  <div class="content-selection"> <!-- Lorende Section -->
-    <div class="collapsible-section">
-      <button class="collapsible">Lorende</button>
-      <div class="content">
-        <h2>Lorende</h2>
-        <h3>Significant Characters in Lorende</h3>
-      </div>
-    </div>
-  </div>
+  <!-- Main Content -->
+  <main id="main-content">
+    <!-- Character Image Decorations -->
+    <aside id="side-decor-left" aria-hidden="true">
+      <img src="assets/otis.JPG" alt="Otis - D&D Character Portrait" loading="lazy">
+      <img src="assets/irarok.JPG" alt="Irarok - D&D Character Portrait" loading="lazy">
+      <img src="assets/taka.JPG" alt="Taka - D&D Character Portrait" loading="lazy">
+      <img src="assets/tonk.JPG" alt="Tonk - D&D Character Portrait" loading="lazy">
+    </aside>
 
-  <div class="content-selection"> <!-- Gold Leaf Forrest Section -->
-    <div class="collapsible-section">
-      <button class="collapsible">Gold Leaf Forrest</button>
-      <div class="content">
-        <h2>Gold Leaf Forest</h2>
-        <h3>Significant Characters in the Gold Leaf Forest</h3>
-      </div>
-    </div>
-  </div>
-  
-  <div class="collapsible-section"> <!-- Greystone Mountains Section -->
-    <button class="collapsible">Greystone Mountains</button>
-    <div class="content">
-      <h2>Greystone Mountains</h2>
-      <h3>Significant Characters in the Greystone Mountains</h3>
-      <p>Xador, Father of the Giants: Frost giant and father of Xarok and Vorn. An ancient giant that has fathered many giants, living deep within the Greystone Mountains.</p>
-    </div>
-  </div>
+    <aside id="side-decor-right" aria-hidden="true">
+      <img src="assets/illizar.JPG" alt="Illizar - D&D Character Portrait" loading="lazy">
+      <img src="assets/minato.JPG" alt="Minato - D&D Character Portrait" loading="lazy">
+      <img src="assets/koroth.JPG" alt="Koroth - D&D Character Portrait" loading="lazy">
+    </aside>
 
-  <div class="content-selection"> <!-- Dendebar Section -->
-    <div class="collapsible-section">
-      <button class="collapsible">Dendebar</button>
-      <div class="content">
-        <h2>Dendebar</h2>
-        <h3>Significant Characters in Dendebar</h3>
-        <p>Thordo Dormah / Asair: An Ancient Gold Dragon, born 2766 years ago, and currently the King of Dendebar. Throdo lives as a human.</p>
-        <p>Ak’ros: Blue dragonborn living in Dendebar, and the resident blacksmith of Dendebar.</p>
-        <p>Kuku: A kenku researching the mines in Dendebar and the ancient language located on the runes inside the mines, which showed connections to the Nine Hells.</p>
-        <p>Isaiah: Left hand of Thordo Dormah, Head of University of Dendebar and lead scientist of the city.</p>
-        <p>Culrian: One of the defenders of Arvandor, left in Terrian after the Great War by greater deities as protector of the mortal realm. Buried deep in the mines of Dendebar, alongside his longsword, Custrios, later wielded by Ko’roth Bloodscale.</p>
-      </div>
-    </div> 
-  </div>
+    <!-- Valkari Logo Section -->
+    <section id="valkari-logo">
+      <img src="assets/Valkari.png" alt="Valkari Campaign Logo" loading="lazy">
+    </section>
 
-  <div class="content-selection"> <!-- Varentis Section -->
-    <div class="collapsible-section">
-      <button class="collapsible">Varentis</button>
-      <div class="content">
-        <h2>Varentis</h2>
-        <p>Meeting ground of the Goliaths from across the North of Valkari. Once every year, the Goliaths from the Greystone, Icepeak, and Frostridge tribes meet here to exchange goods and culture. The meeting ground is situated around a large tree, the burial ground of Frost Giants for centuries, causing conflict between Goliaths and Giants.</p>
+    <!-- Campaign Content Section -->
+    <section class="content-section">
+      <h2>Locations in Valkari</h2>
+      
+      <!-- Whiterun Section -->
+      <article class="collapsible-section">
+        <button class="collapsible" aria-expanded="false" aria-controls="whiterun-content">
+          Whiterun
+        </button>
+        <div class="content" id="whiterun-content" role="region" aria-labelledby="whiterun-heading">
+          <h3 id="whiterun-heading">Whiterun</h3>
+          <h4>Significant Characters in Whiterun</h4>
+          <p><em>Content coming soon - check back for updates on key NPCs and locations in Whiterun.</em></p>
+        </div>
+      </article>
 
-        <h3>Key Events</h3>
-        <p>After the arrival of the 7 Sons, who sought discourse with Goliath leaders and Xador, Father of the Giants, an agreement was reached between Goliaths and Giants, who combined forces to join the rebellion.</p>
-        <p>Whilst in Varentis, Irarok fought the previous chieftain of the Greystone tribe and became the new chieftain.</p>
+      <!-- Lorende Section -->
+      <article class="collapsible-section">
+        <button class="collapsible" aria-expanded="false" aria-controls="lorende-content">
+          Lorende
+        </button>
+        <div class="content" id="lorende-content" role="region" aria-labelledby="lorende-heading">
+          <h3 id="lorende-heading">Lorende</h3>
+          <h4>Significant Characters in Lorende</h4>
+          <p><em>Content coming soon - check back for updates on key NPCs and locations in Lorende.</em></p>
+        </div>
+      </article>
 
-        <h3>Significant Characters in Varentis</h3>
-        <p>Aelara: Couatl woman, leader of one of the Goliath tribes.</p>
-        <p>Kaldor:</p>
-      </div>
-    </div>
-  </div>
+      <!-- Gold Leaf Forest Section -->
+      <article class="collapsible-section">
+        <button class="collapsible" aria-expanded="false" aria-controls="forest-content">
+          Gold Leaf Forest
+        </button>
+        <div class="content" id="forest-content" role="region" aria-labelledby="forest-heading">
+          <h3 id="forest-heading">Gold Leaf Forest</h3>
+          <h4>Significant Characters in the Gold Leaf Forest</h4>
+          <p><em>Content coming soon - check back for updates on key NPCs and locations in the Gold Leaf Forest.</em></p>
+        </div>
+      </article>
+      
+      <!-- Greystone Mountains Section -->
+      <article class="collapsible-section">
+        <button class="collapsible" aria-expanded="false" aria-controls="greystone-content">
+          Greystone Mountains
+        </button>
+        <div class="content" id="greystone-content" role="region" aria-labelledby="greystone-heading">
+          <h3 id="greystone-heading">Greystone Mountains</h3>
+          <h4>Significant Characters in the Greystone Mountains</h4>
+          <p><strong>Xador, Father of the Giants:</strong> Frost giant and father of Xarok and Vorn. An ancient giant that has fathered many giants, living deep within the Greystone Mountains.</p>
+        </div>
+      </article>
 
-  <div class="content-selection"> <!-- Blackvale Pass Section -->
-    <div class="collapsible-section">
-      <button class="collapsible">Blackvale Pass</button>
-      <div class="content">
-        <h2>Blackvale Pass</h2>
-        <p>The location of a large-scale battle between the Empire forces and the rebellion led by the 7 Sons of Valkari. Empire led by Acrobrahn Bevrash with Navare and Arannis of the Vigilun.</p>
+      <!-- Dendebar Section -->
+      <article class="collapsible-section">
+        <button class="collapsible" aria-expanded="false" aria-controls="dendebar-content">
+          Dendebar
+        </button>
+        <div class="content" id="dendebar-content" role="region" aria-labelledby="dendebar-heading">
+          <h3 id="dendebar-heading">Dendebar</h3>
+          <h4>Significant Characters in Dendebar</h4>
+          <p><strong>Thordo Dormah / Asair:</strong> An Ancient Gold Dragon, born 2766 years ago, and currently the King of Dendebar. Throdo lives as a human.</p>
+          <p><strong>Ak'ros:</strong> Blue dragonborn living in Dendebar, and the resident blacksmith of Dendebar.</p>
+          <p><strong>Kuku:</strong> A kenku researching the mines in Dendebar and the ancient language located on the runes inside the mines, which showed connections to the Nine Hells.</p>
+          <p><strong>Isaiah:</strong> Left hand of Thordo Dormah, Head of University of Dendebar and lead scientist of the city.</p>
+          <p><strong>Culrian:</strong> One of the defenders of Arvandor, left in Terrian after the Great War by greater deities as protector of the mortal realm. Buried deep in the mines of Dendebar, alongside his longsword, Custrios, later wielded by Ko'roth Bloodscale.</p>
+        </div>
+      </article>
 
-        <h3>Significant Characters in the Blackvale Pass</h3>
-        <p>Baki: Child of the Blue dragonborn tribe in ghostly form. Died with tribe buried nearby, protected by sentient trees.</p>
-        <p>Willmo Eldaron “Blade”: Younger brother of Minato Eldaron. Former assassin, killed by the party and later resurrected. Remembers nothing before meeting the Queen of Nemar.</p>
-        <p>Navare: High-Elf Vigilun archer.</p>
-        <p>Arannis: Mage of the Empire who resurrected the blue dragon Alkeon beneath Lorenede along with blue dragonborn warriors.</p>
+      <!-- Varentis Section -->
+      <article class="collapsible-section">
+        <button class="collapsible" aria-expanded="false" aria-controls="varentis-content">
+          Varentis
+        </button>
+        <div class="content" id="varentis-content" role="region" aria-labelledby="varentis-heading">
+          <h3 id="varentis-heading">Varentis</h3>
+          <p>Meeting ground of the Goliaths from across the North of Valkari. Once every year, the Goliaths from the Greystone, Icepeak, and Frostridge tribes meet here to exchange goods and culture. The meeting ground is situated around a large tree, the burial ground of Frost Giants for centuries, causing conflict between Goliaths and Giants.</p>
 
-        <h2>Blackvale</h2>
-        <p>An Empire-controlled mining village where slaves mine Blackvale Mountain for a Gem of Al’Garad.</p>
-      </div>
-    </div>
-  </div>
+          <h4>Key Events</h4>
+          <p>After the arrival of the 7 Sons, who sought discourse with Goliath leaders and Xador, Father of the Giants, an agreement was reached between Goliaths and Giants, who combined forces to join the rebellion.</p>
+          <p>Whilst in Varentis, Irarok fought the previous chieftain of the Greystone tribe and became the new chieftain.</p>
 
-  <div class="content-selection"> <!-- Dim Perei Section -->
-    <div class="collapsible-section">
-      <button class="collapsible">Dim Perei</button>
-      <div class="content">
-        <h2>Dim Perei</h2>
-        <h3>Significant Characters in Dim Perei</h3>
-      </div>
-    </div>
-  </div>
+          <h4>Significant Characters in Varentis</h4>
+          <p><strong>Aelara:</strong> Couatl woman, leader of one of the Goliath tribes.</p>
+          <p><strong>Kaldor:</strong> <em>Details coming soon.</em></p>
+        </div>
+      </article>
 
-</div>
+      <!-- Blackvale Pass Section -->
+      <article class="collapsible-section">
+        <button class="collapsible" aria-expanded="false" aria-controls="blackvale-content">
+          Blackvale Pass
+        </button>
+        <div class="content" id="blackvale-content" role="region" aria-labelledby="blackvale-heading">
+          <h3 id="blackvale-heading">Blackvale Pass</h3>
+          <p>The location of a large-scale battle between the Empire forces and the rebellion led by the 7 Sons of Valkari. Empire led by Acrobrahn Bevrash with Navare and Arannis of the Vigilun.</p>
 
-<script> // Script for drop down menus
-  document.querySelectorAll(".collapsible").forEach(button => {
-    button.addEventListener("click", () => {
-      button.classList.toggle("active");
-      const content = button.nextElementSibling;
-      if (content.style.maxHeight) {
-        content.style.maxHeight = null; // collapse
-      } else {
-        content.style.maxHeight = content.scrollHeight + "px"; // expand
-      }
-    });
-  });
-</script>
+          <h4>Significant Characters in the Blackvale Pass</h4>
+          <p><strong>Baki:</strong> Child of the Blue dragonborn tribe in ghostly form. Died with tribe buried nearby, protected by sentient trees.</p>
+          <p><strong>Willmo Eldaron "Blade":</strong> Younger brother of Minato Eldaron. Former assassin, killed by the party and later resurrected. Remembers nothing before meeting the Queen of Nemar.</p>
+          <p><strong>Navare:</strong> High-Elf Vigilun archer.</p>
+          <p><strong>Arannis:</strong> Mage of the Empire who resurrected the blue dragon Alkeon beneath Lorende along with blue dragonborn warriors.</p>
 
-<footer>
-  &copy; 2025 Jack Poulter
-</footer>
+          <h4>Blackvale</h4>
+          <p>An Empire-controlled mining village where slaves mine Blackvale Mountain for a Gem of Al'Garad.</p>
+        </div>
+      </article>
 
-</body><!-- END OF BODY -->
+      <!-- Dim Perei Section -->
+      <article class="collapsible-section">
+        <button class="collapsible" aria-expanded="false" aria-controls="dim-perei-content">
+          Dim Perei
+        </button>
+        <div class="content" id="dim-perei-content" role="region" aria-labelledby="dim-perei-heading">
+          <h3 id="dim-perei-heading">Dim Perei</h3>
+          <h4>Significant Characters in Dim Perei</h4>
+          <p><em>Content coming soon - check back for updates on key NPCs and locations in Dim Perei.</em></p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Jack Poulter. Built for the love of D&D and storytelling.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
 </html>
