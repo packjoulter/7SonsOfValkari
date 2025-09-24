@@ -1,409 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>7 Sons of Valkari - Tools</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D&D Tools - 7 Sons of Valkari</title>
+  <meta name="description" content="Dungeons & Dragons tools for DMs and players - NPC generator, loot tables, and more.">
   <link rel="stylesheet" href="/styles/styles.css">
 </head>
 
-<body> <!-- START OF BODY -->
-<nav id="main-nav"><!-- Navigation Bar -->
-  <div class="nav-container">
-    <div class="nav-left">
-      <a href="/" class="logo">7 Sons of Valkari - Tools Page</a>
-    </div>
-    <div class="nav-right">
-      <div class="dropdown">
-        <button class="dropbtn">☰</button>
-        <div class="dropdown-content">
-          <a href="/tools/index.html">Tools</a>
-          <a href="/characters/index.html">Characters</a>
-          <a href="/about.html">About</a>
+<body>
+  <!-- Skip to main content link for accessibility -->
+  <a href="#main-content" class="visually-hidden">Skip to main content</a>
+
+  <!-- Navigation Bar -->
+  <nav id="main-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="/" class="logo" aria-label="7 Sons of Valkari home page">7 Sons of Valkari - Tools</a>
+      </div>
+      <div class="nav-right">
+        <div class="dropdown">
+          <button class="dropbtn" aria-expanded="false" aria-haspopup="true" aria-label="Main menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+          <div class="dropdown-content" role="menu">
+            <a href="/tools/index.html" role="menuitem">Tools</a>
+            <a href="/characters/index.html" role="menuitem">Characters</a>
+            <a href="/about.html" role="menuitem">About</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<!-- Main Header -->
-<header id="site-header">
-  <img src="/assets/Yggdrasil.webp" alt="Yggdrasil">
-  <div style="text-align: center;">
-    <div class="header-text">
-      <h1>Welcome to the Tools Page</h1>
-      <p>Explore tools by scrolling.</p>
+  <!-- Main Header -->
+  <header id="site-header">
+    <img src="/assets/Yggdrasil.webp" alt="Yggdrasil, the World Tree from Norse mythology">
+    <div class="header-overlay">
+      <div class="header-text">
+        <h1>D&D Tools</h1>
+        <p>Powerful tools to enhance your Dungeons & Dragons experience.</p>
+        <p>Generate NPCs, roll for loot, and more!</p>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
-  <a href="/" class="back-home-button">Back to Home</a>
+  <main id="main-content">
+    <a href="/" class="back-home-button">← Back to Home</a>
 
-  <section id="npc-generator"> <!-- NPC Generator Section -->
-    <h2>NPC Generator</h2>
-
-    <li><strong>NPC Generator:</strong> Create unique characters with traits and backgrounds.</li> <!-- Header for NPC Generator --> 
-
-  <section id="npc-generator" style="max-width: 600px; margin: 40px auto; text-align: center;"> <!-- NPC Generator Section  -->
+    <!-- NPC Generator Section -->
+    <section class="tool-section" id="npc-generator-section">
       <h2>Random NPC Generator</h2>
-    <div id="npc-buttons" style="display: flex; justify-content: center; gap: 10px; margin-top: 15px;">
-      <button id="generate-npc-btn">Generate NPC</button>
-      <button id="copy-npc-btn">Copy NPC</button>
-  </div>
-      <div id="npc-result" style="margin-top: 20px; padding: 10px; background-color: #2c2c3a; border-radius: 8px; box-shadow: 2px 2px 6px #00000088; color: #f0e6d2;"></div>
-  </section>
-  <script> // Random NPC Generator Script
-  const npcData = {
-  firstNames: [
-    "Aric", "Bryn", "Caelen", "Dara", "Eryn", "Faelar", "Gorin", "Hale", "Isolde", "Jarek",
-    "Lira", "Milo", "Nyssa", "Orin", "Pip", "Quinn", "Rian", "Syl", "Tess", "Vorn",
-    "Wren", "Xan", "Yara", "Zed"
-  ],
-  lastNames: [
-    "Stormborn", "Nightshade", "Ironfist", "Swiftfoot", "Duskwalker", "Brightstar",
-    "Shadowalker", "Oakenshield", "Flameheart", "Silverhand",
-    "Underbough", "Fizzlespark", "Strongjaw", "Hogsbottom", "Pebblepocket",
-    "Mugmuncher", "Snoreblaster", "Picklefarmer", "Fumblefoot", "Butterbuns"
-  ],
-  races: [
-    "🧙‍♂️ Human", "🌿 Elf", "⛏️ Dwarf", "👣 Halfling", "😈 Tiefling",
-    "🐲 Dragonborn", "💪 Half-Orc", "🧠 Gnome"
-  ],
-  classes: [
-    "⚔️ Fighter", "🪄 Wizard", "🗡️ Rogue", "⛪ Cleric", "🏹 Ranger",
-    "🎻 Bard", "🛡️ Paladin", "🔥 Warlock", "🍳 Chef", "🎪 Jester"
-  ],
-  alignments: [
-    "Lawful Good", "Neutral Good", "Chaotic Good",
-    "Lawful Neutral", "True Neutral", "Chaotic Neutral",
-    "Lawful Evil", "Neutral Evil", "Chaotic Evil"
-  ],
-  professions: [
-    "blacksmith", "innkeeper", "merchant", "herbalist", "thief", 
-    "monster hunter", "alchemist", "fisherman", "farmer",
-    "rat catcher", "bard-for-hire", "fortune teller", "goblin negotiator",
-    "beekeeper", "gravedigger", "local fool"
-  ],
-  traits: [
-    "has a pet raven", "is always humming", "collects shiny rocks",
-    "speaks in rhymes", "is missing a finger", "has a mysterious tattoo",
-    "is afraid of magic", "wears mismatched boots",
-    "insists they are a prince/princess", "laughs at their own jokes",
-    "thinks they're invisible when they close their eyes",
-    "is obsessed with cheese", "believes their hat is magical",
-    "challenges everyone to arm wrestle", "only speaks in third person",
-    "is convinced they’re cursed", "writes bad poetry about battle",
-    "owns 12 cats (and talks about them constantly)", "has a chicken sidekick",
-    "wears a fake mustache (poorly)"
-  ]
-};
+      <p>Create unique characters with interesting traits and backgrounds for your campaign.</p>
+      
+      <div class="btn-group">
+        <button id="generate-npc-btn" class="btn" type="button">Generate NPC</button>
+        <button id="copy-npc-btn" class="btn" type="button">Copy to Clipboard</button>
+      </div>
 
+      <div id="npc-result" class="result-display" role="region" aria-live="polite" aria-label="Generated NPC">
+        <em>Click "Generate NPC" to create a random character</em>
+      </div>
 
-  function getRandomFrom(array) {
-    return array[Math.floor(Math.random() * array.length)];
-  }
+      <div id="npc-loading" class="loading-indicator" hidden aria-hidden="true">
+        <span class="spinner"></span>
+        <span>Generating NPC...</span>
+      </div>
+    </section>
 
- document.getElementById("generate-npc-btn").addEventListener("click", () => {
-  const firstName = getRandomFrom(npcData.firstNames);
-  const lastName = getRandomFrom(npcData.lastNames);
-  const race = getRandomFrom(npcData.races);
-  const npcClass = getRandomFrom(npcData.classes);
-  const alignment = getRandomFrom(npcData.alignments);
-  const profession = getRandomFrom(npcData.professions);
-  const trait = getRandomFrom(npcData.traits);
+    <!-- Loot Table Generator Section -->
+    <section class="tool-section" id="loot-generator-section">
+      <h2>Random Loot Generator</h2>
+      <p>Generate treasure from various loot tables based on rarity and dice rolls.</p>
 
-  const npcResultText = `
-    <strong>Name:</strong> ${firstName} ${lastName}<br/>
-    <strong>Race:</strong> ${race}<br/>
-    <strong>Class:</strong> ${npcClass}<br/>
-    <strong>Alignment:</strong> ${alignment}<br/>
-    <strong>Profession:</strong> ${profession}<br/>
-    <strong>Trait:</strong> ${trait}
-  `;
+      <form id="loot-form" class="tool-form">
+        <div class="form-group">
+          <label for="table-select">Select Loot Table:</label>
+          <select id="table-select" required aria-describedby="table-help">
+            <option value="">Choose a table</option>
+            <option value="arcana">Arcane Items</option>
+            <option value="armaments">Weapons & Armor</option>
+            <option value="implements">Tools & Implements</option>
+            <option value="relics">Ancient Relics</option>
+          </select>
+          <small id="table-help" class="form-help">Different tables contain themed magical items</small>
+        </div>
 
-  const resultEl = document.getElementById("npc-result");
-  resultEl.innerHTML = npcResultText;
+        <div class="form-group">
+          <label for="rarity-select">Select Rarity:</label>
+          <select id="rarity-select" required aria-describedby="rarity-help">
+            <option value="">Choose rarity</option>
+            <option value="Common">Common</option>
+            <option value="Uncommon">Uncommon</option>
+            <option value="Rare">Rare</option>
+            <option value="Very Rare">Very Rare</option>
+            <option value="Legendary">Legendary</option>
+          </select>
+          <small id="rarity-help" class="form-help">Higher rarity items are more powerful but rarer</small>
+        </div>
 
-  // Fade in animation
-  resultEl.style.opacity = 0;
-  setTimeout(() => {
-    resultEl.style.opacity = 1;
-  }, 50);
-});
+        <div class="form-group">
+          <label for="roll-input">Enter Roll (1-100):</label>
+          <input type="number" id="roll-input" min="1" max="100" required aria-describedby="roll-help">
+          <small id="roll-help" class="form-help">Roll a d100 or enter any number between 1-100</small>
+        </div>
 
+        <button type="submit" id="get-loot-btn" class="btn">Get Loot</button>
+      </form>
 
-  // Copy to clipboard
-  document.getElementById("copy-npc-btn").addEventListener("click", () => {
-    const text = document.getElementById("npc-result").innerText;
-    if (!text.trim()) {
-      alert("Generate an NPC first!");
-      return;
-    }
-    navigator.clipboard.writeText(text)
-      .then(() => alert("NPC copied to clipboard!"))
-      .catch(() => alert("Failed to copy."));
-  });
-  </script>
-  </section>
+      <div id="loot-result" class="result-display" role="region" aria-live="polite" aria-label="Loot result">
+        <em>Fill out the form above and click "Get Loot" to generate treasure</em>
+      </div>
 
-  <section id="loot-generator"> <!-- Loot Generator Section -->
-    <h2>Loot Table Generator</h2>
-  <li><strong>Loot Table:</strong> Quickly random loot for you campaigns. </li>
+      <div id="loot-loading" class="loading-indicator" hidden aria-hidden="true">
+        <span class="spinner"></span>
+        <span>Rolling for loot...</span>
+      </div>
+    </section>
 
-  <section id="loot-generator" style="max-width: 600px; margin: 40px auto; text-align: left;"> <!-- Loot Generator Section --> 
-    <h2>Random Loot Generator</h2>
-    
-    <label for="table-select">Select Loot Table:</label>
-    <select id="table-select">
-      <option value="">Choose a table</option>
-      <option value="arcana">Arcana</option>
-      <option value="armaments">Armaments</option>
-      <option value="implements">Implements</option>
-      <option value="relics">Relics</option>
-    </select>
+    <!-- Fantasy Tensions Generator Section -->
+    <section class="tool-section" id="fantasy-tensions-section">
+      <h2>Fantasy Race Relations Generator</h2>
+      <p>Generate interesting tensions and conflicts between different fantasy races for your campaign.</p>
+      
+      <div class="form-group">
+        <label for="race-select">Choose a race:</label>
+        <select id="race-select" aria-describedby="race-help">
+          <option value="">Select a fantasy race</option>
+        </select>
+        <small id="race-help" class="form-help">Different races have unique cultural tensions and conflicts</small>
+      </div>
 
-    <br /><br />
+      <button id="generate-tension" class="btn" type="button">Generate Tension</button>
+      
+      <div id="tension-result" class="result-display" role="region" aria-live="polite" aria-label="Race tension result">
+        <em>Select a race and click "Generate Tension" to create story hooks</em>
+      </div>
 
-    <label for="rarity-select">Select Rarity:</label>
-    <select id="rarity-select">
-      <option value="">Choose rarity</option>
-      <option value="Common">Common</option>
-      <option value="Uncommon">Uncommon</option>
-      <option value="Rare">Rare</option>
-      <option value="Very Rare">Very Rare</option>
-      <option value="Legendary">Legendary</option>
-    </select>
+      <div id="tension-loading" class="loading-indicator" hidden aria-hidden="true">
+        <span class="spinner"></span>
+        <span>Generating tensions...</span>
+      </div>
+    </section>
 
-    <br /><br />
+    <!-- Dice Roller Section -->
+    <section class="tool-section" id="dice-roller-section">
+      <h2>Advanced Dice Roller</h2>
+      <p>Roll any combination of dice with modifiers and advantage/disadvantage.</p>
+      
+      <form id="dice-form" class="tool-form">
+        <div class="form-group">
+          <label for="dice-input">Dice Expression:</label>
+          <input type="text" id="dice-input" placeholder="1d20+5, 3d6, 2d8-1" aria-describedby="dice-help">
+          <small id="dice-help" class="form-help">Examples: 1d20+5, 3d6, 2d8-1, 4d6kh3 (keep highest 3)</small>
+        </div>
 
-    <label for="roll-input">Enter Roll (1-100):</label>
-    <input type="number" id="roll-input" min="1" max="100" />
+        <div class="form-group">
+          <fieldset>
+            <legend>Roll Type:</legend>
+            <div class="radio-group">
+              <label>
+                <input type="radio" name="advantage" value="normal" checked>
+                Normal Roll
+              </label>
+              <label>
+                <input type="radio" name="advantage" value="advantage">
+                Advantage (roll twice, take higher)
+              </label>
+              <label>
+                <input type="radio" name="advantage" value="disadvantage">
+                Disadvantage (roll twice, take lower)
+              </label>
+            </div>
+          </fieldset>
+        </div>
 
-    <br /><br />
+        <button type="submit" class="btn">Roll Dice</button>
+      </form>
 
-    <button id="get-loot-btn">Get Loot</button>
+      <div id="dice-result" class="result-display" role="region" aria-live="polite" aria-label="Dice roll result">
+        <em>Enter a dice expression and click "Roll Dice"</em>
+      </div>
 
-    <p id="loot-result" style="font-weight: bold; color: #f39c12; margin-top: 20px;"></p>
-  </section>
+      <div id="dice-history" class="dice-history">
+        <h3>Recent Rolls:</h3>
+        <ul id="dice-history-list" class="history-list">
+          <li><em>No rolls yet</em></li>
+        </ul>
+        <button id="clear-history" class="btn btn--secondary" type="button">Clear History</button>
+      </div>
+    </section>
 
-      <script> // Random Loot Generator Script
-  async function loadLootTable(tableName) {
-    if (!tableName) return null;
-    try {
-      const response = await fetch(`/data/${tableName}_loot.json`);
-      if (!response.ok) throw new Error("Failed to load loot table.");
-      const data = await response.json();
-      return data;
-    } catch (error) {
-      alert(error.message);
-      return null;
-    }
-  }
+    <a href="/" class="back-home-button">← Back to Home</a>
+  </main>
 
-  function filterByRarity(data, rarity) {
-    return data.filter(entry => entry.rarity.toLowerCase() === rarity.toLowerCase());
-  }
+  <!-- Error Toast Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
 
-  function lookupLoot(data, roll) {
-    for (const entry of data) {
-      const [start, end] = entry.range;
-      if (roll >= start && roll <= end) {
-        return entry;
-      }
-    }
-    return null;
-  }
-
-  document.getElementById("get-loot-btn").addEventListener("click", async () => {
-    const tableName = document.getElementById("table-select").value;
-    const rarity = document.getElementById("rarity-select").value;
-    const roll = parseInt(document.getElementById("roll-input").value, 10);
-
-    const resultEl = document.getElementById("loot-result");
-    resultEl.textContent = "";
-
-    if (!tableName) {
-      alert("Please select a loot table.");
-      return;
-    }
-    if (!rarity) {
-      alert("Please select a rarity.");
-      return;
-    }
-    if (isNaN(roll) || roll < 1 || roll > 100) {
-      alert("Please enter a roll between 1 and 100.");
-      return;
-    }
-
-    const tableData = await loadLootTable(tableName);
-    if (!tableData) return;
-
-    const filtered = filterByRarity(tableData, rarity);
-    if (filtered.length === 0) {
-      resultEl.textContent = `No items found for rarity '${rarity}'.`;
-      return;
-    }
-
-    const loot = lookupLoot(filtered, roll);
-    if (loot) {
-      resultEl.textContent = `You found: ${loot.item} (Rarity: ${loot.rarity})`;
-    } else {
-      resultEl.textContent = "No item found for this roll and rarity.";
-    }
-  });
-      </script> 
-  </section>
-
-  <section id="slur-generator-background"> <!-- Slur Generator Section -->
-      <section id="slur-generator">
-      <h2>Fantasy Slur Generator</h2>
-      <label for="race-select">Choose a race:</label>
-      <select id="race-select"></select>
-      <button id="generate-slur">Generate Slur</button>
-      <div id="slur-result"></div>
-  </section>
-
-    <script> // Slur Generator Script
-let slurData = [];
-
-// Load slurs.json
-fetch('/data/slurs.json')
-  .then(response => response.json())
-  .then(data => {
-    slurData = data;
-    populateDropdown(data);
-  })
-  .catch(err => {
-    console.error('Error loading slurs.json:', err);
-  });
-
-// Populate dropdown with group titles
-function populateDropdown(data) {
-  const select = document.getElementById('race-select');
-  data.forEach(group => {
-    const option = document.createElement('option');
-    option.value = group.title;
-    option.textContent = group.title;
-    select.appendChild(option);
-  });
-}
-
-// Generate slur for selected group
-document.getElementById('generate-slur').addEventListener('click', () => {
-  const selectedTitle = document.getElementById('race-select').value;
-  if (!selectedTitle) {
-    document.getElementById('slur-result').textContent = 'Please select a race/group.';
-    return;
-  }
-
-  const group = slurData.find(g => g.title === selectedTitle);
-  if (!group || group.list.length === 0) {
-    document.getElementById('slur-result').textContent = 'No slurs found for this group.';
-    return;
-  }
-
-  const slur = group.list[Math.floor(Math.random() * group.list.length)];
-  document.getElementById('slur-result').textContent = `${group.title}: ${slur}`;
-});
-
-    </script>
-  </section>
-
-<!-- <section id="fortune-cookie-background">  Fortune Cookie Section
-  <h2>Fortune Cookie Generator</h2>
-  <p>Click the button to receive a random fortune cookie message.</p>
-  <button id="generate-fortune">Generate Fortune</button>
-  <div id="fortune-result" style="margin-top: 20px; font-weight: bold; color: #f39c12;"></div>
-
-  <script> // Fortune Cookie Generator Script
-  const fortunes = [
-    "You will invent a new spell that turns socks into sandwiches.",
-    "You will invent a new handshake among elves. It will involve three antlers and a magical flute.",
-    "A talking duck will judge your wizard robes. The duck will be correct.",
-    "You will accidentally join a cult devoted to enchanted left boots. Membership is eternal.",
-    "Your next sneeze will summon a minor forest spirit. It will be mildly annoyed.",
-    "You will win a staring contest with your reflection in a scrying orb. The orb will crack out of respect.",
-    "A prophetic potato will reveal your destiny. It involves gravy and goblins.",
-    "You will be mistaken for a famous archmage. The hat will not fit.",
-    "Your next yawn will start a flash mob of dancing pixies. No one will know the choreography.",
-    "You will discover your spirit animal is a confused baby dragon.",
-    "A squirrel bard will write you a poem. It will be mostly acorns.",
-    "You will be haunted by the ghost of a forgotten enchanted sandwich.",
-    "Your next fortune will be delivered by interpretive goblin dance.",
-    "You will invent a language spoken only by enchanted spoons.",
-    "Your boots will develop opinions. They will be very vocal in dwarvish.",
-    "You will be invited to a faerie revel by mistake. Attend anyway.",
-    "A mysterious fog will follow you. It smells faintly of pancakes and magic.",
-    "You will become the subject of a conspiracy theory involving unicorns.",
-    "Your next snack will try to escape using illusion magic. Chase it bravely.",
-    "You will befriend a sentient mop. It will teach you the meaning of life and cleaning spells.",
-    "You will be crowned ruler of the land of lost keys and enchanted locks.",
-    "Your next sneeze will be broadcast live by a magical crystal.",
-    "You will invent a dance move called 'The Regretful Turnip of the Feywild.'",
-    "Your pillow will reveal ancient secrets. Most involve napping in enchanted forests.",
-    "You will be challenged to a duel by a garden gnome knight. Accept with honor.",
-    "Your next compliment will come from a passing cloud elemental.",
-    "You will discover your true calling is competitive napping in wizard towers.",
-    "A pigeon familiar will deliver a message. It will be in magical runes.",
-    "You will be followed by a parade of invisible faerie ducks.",
-    "Your next idea will be so brilliant, even your houseplants will cast spells in applause.",
-    "You will be mistaken for a famous explorer. The map will be enchanted and upside down.",
-    "Your next fortune will rhyme. It will make no sense, but the elves will love it.",
-    "You will invent a new color. It will be banned by the wizard council for being too fabulous.",
-    "Your next sneeze will inspire a new genre of bardic music.",
-    "You will befriend a sock puppet. It will run for mayor of Goblintown.",
-    "Your refrigerator golem will write a memoir. It will be a bestseller in the dwarven kingdoms.",
-    "You will discover a portal to another dimension. It leads to a room full of rubber duck familiars.",
-    "Your next snack will be legendary. It will also be slightly sticky with pixie dust.",
-    "You will be serenaded by a choir of confused magical cats.",
-    "Your shadow will start its own potion shop. It will be wildly successful.",
-    "You will be chosen to lead a parade. The confetti will be enchanted and unionize.",
-    "A dramatic wind will blow through your hair. You will be wearing a wizard hat.",
-    "You will invent a new holiday. Only your houseplants and faeries will celebrate.",
-    "Your next scroll will autocorrect to ancient Sumerian runes. Interpret as you wish.",
-    "You will befriend a sock puppet. It will give terrible advice about dragon slaying.",
-    "Your refrigerator golem will whisper secrets to you. Most will be about expired potions.",
-    "You will achieve enlightenment, but only while stuck in magical traffic.",
-    "A dramatic wind will blow through your hair. You will be indoors at the mage guild.",
-    "You will discover a portal to another dimension. It will be in your laundry basket of enchanted robes.",
-    "Your next snack will be life-changing. It will also be slightly stale from the wizard pantry.",
-    "You will be followed by a mysterious tune. It will be your enchanted ringtone.",
-    "You will soon invent a new dance move called 'The Awkward Sneeze of the Fey.' Fame will be brief.",
-    "A mysterious stranger will offer you wisdom. It will be about magical cheese.",
-    "Your next big idea will come while you’re brushing your teeth with a wand. You’ll forget it instantly.",
-    "You will win an argument with a squirrel wizard. The squirrel will hold a grudge.",
-    "A fortune cookie will change your life. It will also taste suspiciously like enchanted cardboard.",
-    "You will discover a hidden talent for communicating with pigeons. They will ignore you magically.",
-    "Your socks will rebel. Prepare for negotiations with the sock council.",
-    "A wizard will curse you with hiccups. The only cure is interpretive dance in moonlight.",
-    "You will find true love in a bag of potato chips. It will be fleeting and magical.",
-    "Your shadow will start following someone else. Don’t take it personally, it’s a wizard thing.",
-    "You will be chosen to lead a parade. No one will show up, but the enchanted confetti will.",
-    "A dramatic monologue in the enchanted shower will earn you a standing ovation from your shampoo potions.",
-    "You will receive a mysterious package. It will contain only bubble wrap enchanted with laughter.",
-    "Your next sneeze will be legendary. Bards will sing of it for generations.",
-    "You will become a meme in the wizard guild. Your family will pretend not to know you.",
-    "A raccoon familiar will challenge you to a staring contest. You will lose.",
-    "You will invent a new holiday. Only your houseplants and pixies will celebrate.",
-    "Your next scroll will autocorrect to ancient Sumerian runes. Interpret as you wish.",
-    "You will befriend a sock puppet. It will give terrible advice about dragon slaying.",
-    "Your refrigerator golem will whisper secrets to you. Most will be about expired potions.",
-    "You will achieve enlightenment, but only while stuck in magical traffic.",
-    "A dramatic wind will blow through your hair. You will be indoors at the mage guild.",
-    "You will discover a portal to another dimension. It will be in your laundry basket of enchanted robes.",
-    "Your next snack will be life-changing. It will also be slightly stale from the wizard pantry.",
-    "You will be followed by a mysterious tune. It will be your enchanted ringtone."
-  ];
-
-  document.getElementById("generate-fortune").addEventListener("click", () => {
-    const randomIndex = Math.floor(Math.random() * fortunes.length);
-    const fortune = fortunes[randomIndex];
-    document.getElementById("fortune-result").textContent = fortune;
-  });
-  </script>
-
-</section> -->
-
-<a href="/" class="back-home-button">Back to Home</a>
-
-</body> <!-- END OF BODY -->
+  <!-- JavaScript Modules -->
+  <script type="module" src="/js/tools.js"></script>
+</body>
 </html>
